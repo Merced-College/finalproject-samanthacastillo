@@ -1,12 +1,12 @@
 // Samantha Castillo, Final Programming Project, CPCS-39, 12-04-2025
 // *citations at the bottom of code*
 import java.util.List;
-import java.util.ArrayList;
+import java.util.ArrayList; //mycode
 
 public class Recipe { //backend class used to store data
     //declarations
     private String name;
-    private String category;
+    private String category; //mycode
     private List<String> ingredients; //all items in list are a string
     private List<String> directions;
     private int time;
@@ -14,9 +14,9 @@ public class Recipe { //backend class used to store data
     //constructors
     public Recipe(String name, List<String> ingredients, String category, int time) { 
         this.name = name;
-        this.category = category;
+        this.category = category; //mycode
         this.ingredients = ingredients;
-        this.directions = new ArrayList <>();
+        this.directions = new ArrayList <>(); //mycode
         this.time = time;
     }
 
@@ -24,7 +24,7 @@ public class Recipe { //backend class used to store data
     public String getName () {
         return name;
     }
-    public String getCategory () {
+    public String getCategory () { //mycode lines 27-28
         return category;
     }
     public List<String> getIngredients () {
@@ -38,7 +38,7 @@ public class Recipe { //backend class used to store data
     }
 
     public void addDirection(String step) { //adds cooking directions in a list in order
-        directions.add(step); //allows you to call to add a step
+        directions.add(step); //allows you to call to add a step - my code (lines 40-41)
     }
 
 }

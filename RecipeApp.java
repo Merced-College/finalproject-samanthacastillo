@@ -2,39 +2,39 @@
 // *citations at the bottom of code*
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
+import java.util.Scanner; //mycode
 
 public class RecipeApp { //Main class, runs program
     public static void main(String[] args) { 
         RecipeManager manager = new RecipeManager();
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); //mycode
 
         //add recipe
         List<String> ingredients1 = Arrays.asList("1 1/2 cups: flour", "3 1/2 tsp: baking powder", 
         "1 tbsp: white sugar", "1/4 tsp: salt", "1 1/4 cup: milk", "3 tbsp: melted butter", "1: large egg"); //an array list using strings to list ingredients
-        String category1 = "Breakfast";
+        String category1 = "Breakfast"; //my code
         Recipe pancakeRecipe = new Recipe("Pancake", ingredients1, category1,
         20); //creates new recipe object by calling Recipe class and stores data in object
-        pancakeRecipe.addDirection("Melt Butter"); //adds directions to a recipes list
+        pancakeRecipe.addDirection("Melt Butter"); //adds directions to a recipes list (my code lines 18-20)
         pancakeRecipe.addDirection("mix dry and wet ingredients");
         pancakeRecipe.addDirection("butter pan to cook, flipping until golden");
 
         List<String> ingredients2 = Arrays.asList("1 lb: spaghetti noodles", "1/2 lb: ground beef", 
         "24 oz: marinara");
-        String category2 = "Dinner";
+        String category2 = "Dinner"; //mycode
         Recipe spaghettiRecipe = new Recipe("Spaghetti", ingredients2, category2, 
         30);
-        spaghettiRecipe.addDirection("cook noodles");
+        spaghettiRecipe.addDirection("cook noodles"); //mycode lines 27-30
         spaghettiRecipe.addDirection("cook ground beef");
         spaghettiRecipe.addDirection("drain noodles, add sauce and beef");
         spaghettiRecipe.addDirection("mix");
 
         List<String> ingredients3 = Arrays.asList ("4 slices: brioche bread", "1: large egg", 
         "1 tsp: vanilla extract", "1/4 cup: milk", "1/2 tsp: cinnamon");
-        String category3 = "Breakfast";
+        String category3 = "Breakfast"; //mycode
         Recipe frenchtoastRecipe = new Recipe ("French Toast", ingredients3, category3,
          20);
-        frenchtoastRecipe.addDirection("mix wet ingredients");
+        frenchtoastRecipe.addDirection("mix wet ingredients"); //mycode(lines 37-39)
         frenchtoastRecipe.addDirection("dip slice of bread in wet ingredients");
         frenchtoastRecipe.addDirection("butter pan to cook, flipping until golden");
 
@@ -44,37 +44,37 @@ public class RecipeApp { //Main class, runs program
         manager.addRecipe(frenchtoastRecipe);
 
         //print method for recipes and dirctions
-        System.out.println(""); //space to make it easier to read in terminal
-        manager.printRecipe(pancakeRecipe); //print recipe by calling it
-        System.out.println("Directions: ");
-        manager.loadDirections(pancakeRecipe); //loads directions into queue
+        System.out.println(""); //space to make it easier to read in terminal - my code
+        manager.printRecipe(pancakeRecipe); //print recipe and its details by calling it
+        System.out.println("Directions: "); //mycode
+        manager.loadDirections(pancakeRecipe); //loads directions into queue my code (lines 50-53)
         manager.printNextDirection(); //prints directions from queue in order
         manager.printNextDirection();
         manager.printNextDirection();
 
-        System.out.println("");
+        System.out.println(""); //mycode
         manager.printRecipe(spaghettiRecipe);
-        System.out.println("Directions: ");
-        manager.loadDirections(spaghettiRecipe);
+        System.out.println("Directions: "); //mycode
+        manager.loadDirections(spaghettiRecipe); //my code (lines 58-62)
         manager.printNextDirection();
         manager.printNextDirection();
         manager.printNextDirection();
         manager.printNextDirection();
 
-        System.out.println("");
+        System.out.println(""); //mycode
         manager.printRecipe(frenchtoastRecipe);
-        System.out.println("Directions: ");
-        manager.loadDirections(frenchtoastRecipe);
+        System.out.println("Directions: "); //mycode
+        manager.loadDirections(frenchtoastRecipe); //my code (lines 67-70)
         manager.printNextDirection();
         manager.printNextDirection();
         manager.printNextDirection();
 
-        //recursion output for total number of recipes
+        //recursion output for total number of recipes - my code (lines 73-75)
         System.out.println("");
         System.out.println("You have " + manager.recipeCounter() + 
         " recipes. "); //calls reciperCounter from RecipeManager
 
-        //search by category
+        //search by category - my code (lines 78-93)
         System.out.println("\nSearching for category..");
         String searchByCategory = "Breakfast"; //looking for breakfast
         boolean found = false;
@@ -92,7 +92,7 @@ public class RecipeApp { //Main class, runs program
             System.out.println(searchByCategory + "not found");
         }
 
-        //user input for recipe deletion
+        //user input for recipe deletion - my code (lines 96-106)
         System.out.println(""); //space to read easy on terminal
         System.out.println("Would you like to delete a recipe?");
         String answer = scanner.nextLine(); //user input for yes or no
