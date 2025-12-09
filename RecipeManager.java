@@ -3,22 +3,22 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.Queue; //my code
-import java.util.LinkedList; //mycode
-import java.util.HashMap; //mycode
-import java.util.Map; //mycode
-
+import java.util.Queue; //****my code
+import java.util.LinkedList; //****mycode
+import java.util.HashMap; //****mycode
+import java.util.Map; //****mycode
+//code in this class is from code grindz, modified to fit my program (where it says my code is code i wrote and added)
 public class RecipeManager { //back that manages recipes. Provides methods to add/delete, view, and count total recipes.
     //declarations
     private List<Recipe> recipes;
     private Queue<String> directionsQueue; //all items in queue are a string - my code
     private Map<String, Recipe> recipeMap; //all items in map are a string in Recipe - my code
 
-    //constructors my code(lines 18-22)
+    //constructors ****my code(lines 18-22)
     public RecipeManager() {
         this.recipes = new ArrayList <> ();
-        this.recipeMap = new HashMap <>(); //mycode
-        this.directionsQueue = new LinkedList <>(); //mycode
+        this.recipeMap = new HashMap <>(); //****my code
+        this.directionsQueue = new LinkedList <>(); //****my code
     }
 
     //search by filtering method (my code lines 25-29)
@@ -37,19 +37,19 @@ public class RecipeManager { //back that manages recipes. Provides methods to ad
 
     public List <Recipe> getRecipes(){ //allows you to access everything in Recipe class in recipe manager
         return recipes;
-    } //mycode lines 38-40//
+    } //****mycode lines 38-40//
 
     //add recipe
     public void addRecipe(Recipe recipe) { 
         recipes.add(recipe); //stores recipe
-        recipeMap.put(recipe.getName().toLowerCase(), recipe); //searches by name - my code
+        recipeMap.put(recipe.getName().toLowerCase(), recipe); //searches by name ****my code
     }
 
     //delete recipe
     public void deleteRecipe (Recipe recipe) { 
         recipes.remove(recipe); //removes recipe
     }
-    public void deleteRecipe(String name) { //mycode (lines 52-61)
+    public void deleteRecipe(String name) { //****mycode (lines 52-61)
         Recipe recipe = recipeMap.get(name.toLowerCase()); //finds recipe by name ignoring charecters
         if (recipe != null) {
             recipes.remove(recipe); //removes recipe object from recipe manager               
@@ -64,11 +64,11 @@ public class RecipeManager { //back that manages recipes. Provides methods to ad
     public void printRecipe (Recipe recipe) { //calls Recipe object and prints data
         System.out.println("Name: " + recipe.getName()); //prints out data stored in Recipe object for name
         System.out.println("Ingredients: " + recipe.getIngredients());
-        System.out.println("Category: " + recipe.getCategory()); //mycode
+        System.out.println("Category: " + recipe.getCategory()); //****mycode
         System.out.println("Time: " + recipe.getTime() + " minutes");
     }
 
-   //recursion to count all recipes (my code lines 72-80)
+   //recursion to count all recipes (****my code lines 72-80), used video by vlogize and ChatGPT as guide for recursion (wrote code myself)
    public int recipeCounter () { //method for recursion starting at 0
     return recipeCounterCheck (0);
    }
@@ -79,7 +79,7 @@ public class RecipeManager { //back that manages recipes. Provides methods to ad
     return 1 + recipeCounterCheck(i + 1); //adds 1 and calls itself again
    }
 
-   //directions for queue my code(lines 83-91)
+   //directions for queue ****my code(lines 83-91), used bro code and alex lee's video as guide for queue code
    public void loadDirections (Recipe recipe) { //loads directions from a recipe into a queue
     directionsQueue.addAll(recipe.getDirections()); //adds all directions from list into queue
    }

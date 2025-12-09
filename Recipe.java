@@ -1,12 +1,12 @@
 // Samantha Castillo, Final Programming Project, CPCS-39, 12-04-2025
 // *citations at the bottom of code*
 import java.util.List;
-import java.util.ArrayList; //mycode
-
+import java.util.ArrayList; //****mycode
+//code in this class is from code grindz, modified to fit my program (where it says my code is code i wrote and added)
 public class Recipe { //backend class used to store data
     //declarations
     private String name;
-    private String category; //mycode
+    private String category; //****my code
     private List<String> ingredients; //all items in list are a string
     private List<String> directions;
     private int time;
@@ -14,9 +14,9 @@ public class Recipe { //backend class used to store data
     //constructors
     public Recipe(String name, List<String> ingredients, String category, int time) { 
         this.name = name;
-        this.category = category; //mycode
+        this.category = category; //****my code
         this.ingredients = ingredients;
-        this.directions = new ArrayList <>(); //mycode
+        this.directions = new ArrayList <>(); //****my code
         this.time = time;
     }
 
@@ -24,7 +24,7 @@ public class Recipe { //backend class used to store data
     public String getName () {
         return name;
     }
-    public String getCategory () { //mycode lines 27-28
+    public String getCategory () { //****my code lines 27-28
         return category;
     }
     public List<String> getIngredients () {
@@ -36,9 +36,9 @@ public class Recipe { //backend class used to store data
     public int getTime () {
         return time;
     }
-
-    public void addDirection(String step) { //adds cooking directions in a list in order
-        directions.add(step); //allows you to call to add a step - my code (lines 40-41)
+    
+    public void addDirection(String step) { //****my code (lines 40-41) adds cooking directions in a list in order
+        directions.add(step); //allows you to call to add a step
     }
 
 }
